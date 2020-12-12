@@ -11,7 +11,7 @@ class JoinSession extends Component {
     }
 
 
-    uploadGiftImgHandler = event => {
+    updateDisplayGiftImgHandler = event => {
         const reader = new FileReader();
         reader.onload = () => {
             if (reader.readyState == 2) {
@@ -37,7 +37,7 @@ class JoinSession extends Component {
                     <input type="text" placeholder="Gift Link"></input>
                 </div>
                 <div>
-                    <input type="file" onChange={this.uploadGiftImgHandler}></input>
+                    <input type="file" onChange={this.updateDisplayGiftImgHandler}></input>
                 </div>
                 <div>
                     <img src={this.state.giftImg}></img>
